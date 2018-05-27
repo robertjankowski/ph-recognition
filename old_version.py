@@ -48,8 +48,8 @@ def on_mouse(event):
 #     "C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\gradient_regression_85.pkl", 'rb')
 # clf = pickle.load(pickle_in)
 
-# I kave to save model to .pickle file
-with open("C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\model-0.99-v2.pickle", 'rb') as f:
+# I have to save model to .pickle file
+with open("C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\GBR_best-v2.pickle", 'rb') as f:
     clf = pickle.load(f)
 
 panel = None
