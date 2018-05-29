@@ -39,6 +39,7 @@ def on_mouse(event):
     red = cv_img[event.y][event.x][2]
     green = cv_img[event.y][event.x][1]
     blue = cv_img[event.y][event.x][0]
+    print(cv_img[event.y][event.x])
     test = np.vstack([blue, green, red]).T
     ph_predict = clf.predict(test)
     text.set("pH: " + str(ph_predict).strip('[]'))
@@ -49,7 +50,7 @@ def on_mouse(event):
 # clf = pickle.load(pickle_in)
 
 # I have to save model to .pickle file
-with open("C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\GBR_best-v2.pickle", 'rb') as f:
+with open("C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\GBR_best+1-v1.pickle", 'rb') as f:
     clf = pickle.load(f)
 
 panel = None
