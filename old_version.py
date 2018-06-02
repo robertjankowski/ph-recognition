@@ -50,7 +50,7 @@ def on_mouse(event):
 # clf = pickle.load(pickle_in)
 
 # I have to save model to .pickle file
-with open("C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\GBR_best+1-v1.pickle", 'rb') as f:
+with open("C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\GBR_best+20-new1.pickle", 'rb') as f:
     clf = pickle.load(f)
 
 panel = None
