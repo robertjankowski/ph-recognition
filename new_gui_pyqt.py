@@ -34,7 +34,7 @@ class Gui(QMainWindow):
         fileMenu = menubar.addMenu('&File')
         fileMenu.addAction(openFile)
 
-        self.setSizeConstraint()
+        # self.setSizeConstraint()
 
         self.load_model('name')
         self.show()
@@ -61,7 +61,7 @@ class Gui(QMainWindow):
         self.statusBar().showMessage(rgb)
 
     def load_model(self, name):
-        with open("saved_models\\29_datasets.pickle", 'rb') as f:
+        with open("saved_models\\34_datasets.pickle", 'rb') as f:
             self.clf = pickle.load(f)
 
     def predict(self, r, g, b):
