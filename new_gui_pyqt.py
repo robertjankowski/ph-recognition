@@ -4,6 +4,7 @@ from PyQt5.QtCore import *
 import sys
 import pickle
 import numpy as np
+from sklearn.externals import joblib
 
 
 class Gui(QMainWindow):
@@ -61,8 +62,8 @@ class Gui(QMainWindow):
         self.statusBar().showMessage(rgb)
 
     def load_model(self, name):
-        with open("saved_models\\34_datasets.pickle", 'rb') as f:
-            self.clf = pickle.load(f)
+        with open("saved_models\\rnd_search_cv_82%.pkl", 'rb') as f:
+            self.clf = joblib.load(f)
 
     def predict(self, r, g, b):
         predict_rgb = np.vstack([b, g, r]).T
