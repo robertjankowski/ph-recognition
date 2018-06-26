@@ -62,8 +62,12 @@ class Gui(QMainWindow):
         self.statusBar().showMessage(rgb)
 
     def load_model(self, name):
-        with open("saved_models\\rnd_search_cv_82%.pkl", 'rb') as f:
+        name = "saved_models\\rnd_search_cv_82%.pkl"
+        # name2 = "saved_models\\voting_clf-85.pkl"
+        # name1 = "saved_models\\37_datasets.pickle"
+        with open(name, 'rb') as f:
             self.clf = joblib.load(f)
+            # self.clf = pickle.load(f)
 
     def predict(self, r, g, b):
         predict_rgb = np.vstack([b, g, r]).T
