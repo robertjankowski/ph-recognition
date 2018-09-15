@@ -17,6 +17,10 @@ I downloaded images of ph-scale from [here](https://www.shutterstock.com/search/
 * ***process_data.ipynb*** - 2D and 3D graphs, split data, training on *GradientBoostingRegressor*, *RandomForestRegressor*
 * ***unsupervised_lerning.ipynb*** - testing *KMeans* algorithm
 
+***
+## shiny app
+
+TODO: demo will be avaiable at [shinyapps.io](https://www.shinyapps.io/) server soon.
 
 ***
 ## GUI
