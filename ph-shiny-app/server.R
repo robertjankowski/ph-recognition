@@ -12,7 +12,6 @@ function(input, output, session) {
         isolate({
             withProgress({
                 setProgress(message = "Processing corpus...")
-                processImage(file1$datapath)
             })
         })
     })
@@ -25,7 +24,9 @@ function(input, output, session) {
         if (is.null(input$file1)) {
             return(list(
                 src = "images/ph_scale1.jpg",
-                contentType = "image/jpeg", # "image/png" 
+                contentType = "image/jpeg", # "image/png"
+                width = width,
+                height = height,
                 alt = "image"
             ))
         }
@@ -36,11 +37,21 @@ function(input, output, session) {
         return(list(
             src = input$file1$datapath,
             contentType = ifelse(type == "png", "image/png", "image/jpeg"),
-            width = width,
-            height = height,
+            # width = width, # only for tests
+            # height = height,
             alt = "image"
         ))
         
     }, deleteFile = FALSE)
+    
+    output$click_info <- renderPrint({
+        x <- input$image_click$x
+        y <- input$image_click$y
+        width  <- session$clientData$output_image_width
+        height <- session$clientData$output_image_height
+        if(!is.null(input$file1)) {
+            processImage(x, y, input$file1$datapath, width, height)   
+        }
+    })
     
 }

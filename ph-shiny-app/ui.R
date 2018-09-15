@@ -11,10 +11,13 @@ fluidPage(theme=shinytheme("journal"),
                           "image/png", "image/jpeg")
             ),
 
-            tags$hr()
+            tags$hr(),
+            column(width = 12,
+                   verbatimTextOutput("click_info")
+            )
         ),
         mainPanel(
-            imageOutput("image")
+            imageOutput("image", click = "image_click")
         )
     )
 )
