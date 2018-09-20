@@ -34,10 +34,16 @@ processImage <- function(mouse_x, mouse_y, files, width, height) {
                      filter(y == floor(as.numeric(mouse_y))) %>%
                      select(value) %>% mutate(value=value * 255.0)
     
+    red <- rgb_scale$value[1]
+    green <- rgb_scale$value[2]
+    blue <- rgb_scale$value[3]
+    
+    result <- system(paste("python predict.py", red, green, blue), intern = TRUE)
+    
     cat("X      = ", mouse_x)
     cat("\nY      = ", mouse_y)
     cat("\nwidth  = ", width)
     cat("\nheight = ", height, '\n')
-    head(rgb_scale)
     
+    cat(result)
 }

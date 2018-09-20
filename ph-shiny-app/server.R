@@ -20,27 +20,18 @@ function(input, output, session) {
         width  <- session$clientData$output_image_width
         height <- session$clientData$output_image_height
         
-        # test image
-        if (is.null(input$file1)) {
+        if (!is.null(input$file1)) {
+            # render input file
+            img <- input$file1$datapath
+            type <- file_ext(img)
             return(list(
-                src = "images/ph_scale1.jpg",
-                contentType = "image/jpeg", # "image/png"
-                width = width,
-                height = height,
+                src = input$file1$datapath,
+                contentType = ifelse(type == "png", "image/png", "image/jpeg"),
+                # width = width, # only for tests
+                # height = height,
                 alt = "image"
-            ))
+            ))   
         }
-        
-        # render input file
-        img <- input$file1$datapath
-        type <- file_ext(img)
-        return(list(
-            src = input$file1$datapath,
-            contentType = ifelse(type == "png", "image/png", "image/jpeg"),
-            # width = width, # only for tests
-            # height = height,
-            alt = "image"
-        ))
         
     }, deleteFile = FALSE)
     
