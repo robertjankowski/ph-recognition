@@ -2,6 +2,15 @@
 
 Show ph value from the image based on the its color. Using machine learning algorithms.
 
+*** 
+### Online version 
+
+I use `shinyapps.io` server to deploy application. [**Here**](https://robertjankowski.shinyapps.io/ph-shiny-app/) is full version.
+
+**TODO**
+1. to speed up store in cache models
+2. resizing images
+
 ***
 ### From where I got datasets ?
 
