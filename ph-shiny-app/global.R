@@ -1,5 +1,3 @@
-library(jpeg)
-library(OpenImageR)
 library(imager)
 library(tidyverse)
 library(reshape2)

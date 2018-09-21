@@ -3,11 +3,18 @@
 Show ph value from the image based on the its color. Using machine learning algorithms.
 
 *** 
-### Online version 
+### [Online version](https://robertjankowski.shinyapps.io/ph-shiny-app/) 
 
-I use `shinyapps.io` server to deploy application. [**Here**](https://robertjankowski.shinyapps.io/ph-shiny-app/) is full version.
+I use `shinyapps.io` server to deploy application. Unfortunately `shinyapps.io` doesn't support Python modules (`numpy`, `scipy`, `sklearn`) so in this case to run app follow this steps:
+
+- `git clone` or download repository
+- `Rscript install_packages.R` - install necessary packages
+- `R -e "shiny::runApp()"` - run shiny app
+
+![shiny_app](images/shiny_app.png)
 
 **TODO**
+
 1. to speed up store in cache models
 2. resizing images
 
