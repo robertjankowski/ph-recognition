@@ -45,11 +45,11 @@ def on_mouse(event):
 
 
 # pickle_in = open(
-#     "C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\gradient_regression_85.pkl", 'rb')
+#     "saved_models\\gradient_regression_85.pkl", 'rb')
 # clf = pickle.load(pickle_in)
 
 # I have to save model to .pickle file
-with open("C:\\Users\\asus\\Desktop\\data_science_python\\ph_project\\saved_models\\29_datasets.pickle", 'rb') as f:
+with open("saved_models\\29_datasets.pickle", 'rb') as f:
     clf = pickle.load(f)
 
 panel = None
