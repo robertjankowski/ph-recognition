@@ -5,7 +5,7 @@ Show ph value from the image based on the its color. Using machine learning algo
 *** 
 ### [Online version](https://robertjankowski.shinyapps.io/ph-shiny-app/) 
 
-I use `shinyapps.io` server to deploy application. Unfortunately `shinyapps.io` doesn't support Python modules (`numpy`, `scipy`, `sklearn`) so in this case to run app follow this steps:
+I used `shinyapps.io` server to deploy application. Unfortunately `shinyapps.io` doesn't support Python modules such as `numpy`, `scipy`, `sklearn` so in this case to run app follow this steps:
 
 - `git clone` or download repository
 - `Rscript install_packages.R` - install necessary packages
@@ -15,13 +15,13 @@ I use `shinyapps.io` server to deploy application. Unfortunately `shinyapps.io` 
 
 **TODO**
 
-1. to speed up store in cache models
+1. store in cache models (speed up)
 2. resizing images
 
 ***
 ### From where I got datasets ?
 
-I downloaded images of ph-scale from [here](https://www.shutterstock.com/search/ph+scale) then I croped into small pictures so for example the 0 ph value correspond to _0.jpg_.
+I downloaded images of ph-scale from [here](https://www.shutterstock.com/search/ph+scale) then I croped into small pictures so for example the 0 ph value correspond to _0.jpg_. 
 
 ***
 ### jupyter notebooks
